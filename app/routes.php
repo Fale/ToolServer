@@ -15,3 +15,6 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+
+Route::get('isbn', Array('uses' => 'IsbnController@index'));
+Route::get('isbn/{isbn}', Array('uses' => 'IsbnController@isbn'));
