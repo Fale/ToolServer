@@ -24,15 +24,15 @@
           <a class="brand" href="#">Fale's Tools</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li class="{{{ Request::is('/') ? ' class="active"' : '' }}}"><a href="/">Home</a></li>
+              <li class="{{{ Request::is('~fale') ? ' class="active"' : '' }}}"><a href="/~fale">Home</a></li>
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle {{{ Request::is('isbn*') ? ' active' : '' }}}" data-toggle="dropdown">ISBN<b class="caret"></b></a>
+                <a href="#" class="dropdown-toggle {{{ Request::is('~fale/isbn*') ? ' active' : '' }}}" data-toggle="dropdown">ISBN<b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                  <li class="{{{ Request::is('isbn/check') ? ' class="active"' : '' }}}"><a href="/isbn/check">Check</a></li>
-                  <li class="{{{ Request::is('isbn/citaLibro*') ? ' class="active"' : '' }}}"><a href="/isbn/citaLibro">Cita libro</a></li>
+                  <li class="{{{ Request::is('~fale/isbn/check') ? ' class="active"' : '' }}}"><a href="/~fale/isbn/check">Check</a></li>
+                  <li class="{{{ Request::is('~fale/isbn/citaLibro*') ? ' class="active"' : '' }}}"><a href="/~fale/isbn/citaLibro">Cita libro</a></li>
                 </ul>
               </li>
-              <li class="{{{ Request::is('/contact') ? ' class="active"' : '' }}}"><a href="/contact">Contact</a></li>
+              <li class="{{{ Request::is('/~fale/contact') ? ' class="active"' : '' }}}"><a href="/~fale/contact">Contact</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
