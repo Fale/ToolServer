@@ -2,9 +2,12 @@
 
 class IsbnController extends BaseController {
 
+    public $layout = 'layouts.default';
+
     public function index()
     {
-        return View::make('hello');
+        $this->layout->title = 'ISBN tool';
+        $this->layout->content = 'home';
     }
 
     public function isbn($isbn)
