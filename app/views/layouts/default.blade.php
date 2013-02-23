@@ -21,12 +21,18 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="#">@yield('title')</a>
+          <a class="brand" href="#">Fale's Tools</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li class="{{{ Request::is('/') ? ' class="active"' : '' }}}"><a href="/">Home</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle {{{ Request::is('isbn*') ? ' active' : '' }}}" data-toggle="dropdown">ISBN<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li class="{{{ Request::is('isbn/check') ? ' class="active"' : '' }}}"><a href="/isbn/check">Check</a></li>
+                  <li class="{{{ Request::is('isbn/citaLibro*') ? ' class="active"' : '' }}}"><a href="/isbn/citaLibro">Cita libro</a></li>
+                </ul>
+              </li>
+              <li class="{{{ Request::is('/contact') ? ' class="active"' : '' }}}"><a href="/contact">Contact</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -41,4 +47,6 @@
                  alt="Fork me on GitHub" />
         </a>
     </body>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="{{ path('bootstrap/js/bootstrap.min.js') }}"></script>
 </html>
