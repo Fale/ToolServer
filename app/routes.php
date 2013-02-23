@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', Array('uses' => 'HomeController@index'));
+Route::get('/', function(){ return View::make('home');});
 
 Route::get('isbn', Array('uses' => 'IsbnController@index'));
 Route::get('isbn/{isbn}', Array('uses' => 'IsbnController@isbn'));
