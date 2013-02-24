@@ -4,10 +4,12 @@
 
 @section('content')
     <h1>Welcome to Fale's Cita libro tool</h1>
-    <form name="module">
-        <p>ISBN</p>
-        <p><input type="text" name="isbn" id="isbn"></p>
-        <input type="button" id="submit" value="Send">
+    <form>
+        <fieldset>
+            <label>ISBN</label>
+            <input type="text" name="isbn" id="isbn"><br />
+            <button type="submit" id="submit" class="btn">Submit</button>
+        </fieldset>
     </form>
     <div id="result"></div>
 
