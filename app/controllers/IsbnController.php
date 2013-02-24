@@ -2,14 +2,6 @@
 
 class IsbnController extends BaseController {
 
-    public $layout = 'layouts.default';
-
-    public function index()
-    {
-        $this->layout->title = 'ISBN tool';
-        $this->layout->content = 'home';
-    }
-
     public function isbn($isbn)
     {
         $link = $this->retriveJson("https://www.googleapis.com/books/v1/volumes?q=isbn:$isbn")['items']['0']['selfLink'];
