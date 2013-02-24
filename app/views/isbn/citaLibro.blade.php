@@ -6,9 +6,10 @@
     <h1>Welcome to Fale's Cita libro tool</h1>
     <form>
         <fieldset>
-            <label>ISBN</label>
-            <input type="text" name="isbn" id="isbn"><br />
-            <button type="submit" id="submit" class="btn">Submit</button>
+            <div class="input-append">
+                <input class="span2" id="isbn" type="text" placeholder="ISBN">
+                <button class="btn" id="submit" type="button">Create!</button>
+            </div>
         </fieldset>
     </form>
     <div id="result"></div>
