@@ -4,8 +4,9 @@ class IsbnController extends BaseController {
 
     public function isbn($isbn)
     {
-        $json = $this->retriveJson("https://www.googleapis.com/books/v1/volumes?q=isbn:$isbn");
-        $link = $json['items']['0']['selfLink'];
+        $link = $this->retriveIsbnLink($isbn);
+        if (!$link)
+            return NULL;
         $rawData = $this->retriveJson($link);
         $data = Array();
         $data["titolo"] = $rawData['volumeInfo']['title'];
@@ -15,7 +16,17 @@ class IsbnController extends BaseController {
         $data["giorno"] = date("d", strtotime($rawData['volumeInfo']['publishedDate']));
         $data["coautori"] = $this->autori($rawData['volumeInfo']['authors']);
         $data["editore"] = $rawData['volumeInfo']['publisher'];
-        echo "{{cita libro | " . $this->implode_with_key($data, "=", " | ") . "}}";
+        return "{{cita libro | " . $this->implode_with_key($data, "=", " | ") . "}}";
+    }
+
+    private function retriveIsbnLink($isbn)
+    {
+        $json = $this->retriveJson("https://www.googleapis.com/books/v1/volumes?q=isbn:$isbn");
+        if (array_key_exists('kind', $json))
+            if (array_key_exists('totalItems', $json))
+                if ($json['totalItems'] > 0)
+                    return $json['items']['0']['selfLink'];
+        return NULL;
     }
 
     private function implode_with_key($assoc, $inglue = '>', $outglue = ',')

@@ -25,12 +25,17 @@
                     dataType: "html",
                     success: function(msg)
                     {
-                        $("#result").html(msg);
-                        result.className = 'alert alert-success';
+                        if (msg == ""){
+                            $("#result").html("ISBN code does not exist");
+                            result.className = 'alert alert-error';
+                        }else{
+                            $("#result").html(msg);
+                            result.className = 'alert alert-success';
+                        }
                     },
                     error: function()
                     {
-                        $("#result").html("Error, ISBN code not valid");
+                        $("#result").html("Google Books not avilable");
                         result.className = 'alert alert-error';
                     }
                 });
