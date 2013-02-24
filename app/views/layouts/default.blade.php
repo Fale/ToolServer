@@ -22,10 +22,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="#">Fale's Tools</a>
+          <a class="brand" href="/~fale">Fale's Tools</a>
           <div class="nav-collapse collapse">
+            <p class="navbar-text pull-right {{{ Request::is('/~fale/contact') ? ' active' : '' }}}">
+              <a href="/~fale/contact" class="navbar-link">Contact</a>
+            </p>
             <ul class="nav">
-              <li class="{{{ Request::is('~fale') ? ' class="active"' : '' }}}"><a href="/~fale">Home</a></li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle {{{ Request::is('~fale/isbn*') ? ' active' : '' }}}" data-toggle="dropdown">ISBN<b class="caret"></b></a>
                 <ul class="dropdown-menu">
@@ -33,7 +35,6 @@
                   <li class="{{{ Request::is('~fale/isbn/citaLibro*') ? ' class="active"' : '' }}}"><a href="/~fale/isbn/citaLibro">Cita libro</a></li>
                 </ul>
               </li>
-              <li class="{{{ Request::is('/~fale/contact') ? ' class="active"' : '' }}}"><a href="/~fale/contact">Contact</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
