@@ -4,7 +4,8 @@ class IsbnController extends BaseController {
 
     public function isbn($isbn)
     {
-        $link = $this->retriveJson("https://www.googleapis.com/books/v1/volumes?q=isbn:$isbn")['items']['0']['selfLink'];
+        $json = $this->retriveJson("https://www.googleapis.com/books/v1/volumes?q=isbn:$isbn");
+        $link = $json['items']['0']['selfLink'];
         $rawData = $this->retriveJson($link);
         $data = Array();
         $data["titolo"] = $rawData['volumeInfo']['title'];
