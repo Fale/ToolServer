@@ -15,6 +15,7 @@
         $(document).ready(function() {
             $("#submit").click(function(){
                 var isbn = $("#isbn").val();
+                var result = document.getElementById('result');
                 $.ajax({
                     type: "GET",
                     url: "/~fale/isbn/citaLibro/" + isbn,
@@ -22,10 +23,12 @@
                     success: function(msg)
                     {
                         $("#result").html(msg);
+                        result.className = 'alert alert-success';
                     },
                     error: function()
                     {
-                        alert("Error, failed call");
+                        $("#result").html("Error, ISBN code not valid");
+                        result.className = 'alert alert-error';
                     }
                 });
             });
