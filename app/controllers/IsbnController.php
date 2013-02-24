@@ -19,6 +19,14 @@ class IsbnController extends BaseController {
         return "{{cita libro | " . $this->implode_with_key($data, "=", " | ") . "}}";
     }
 
+    public function checkIsbn($isbn)
+    {
+        if ($this->retriveIsbnLink($isbn))
+            return 1;
+        else
+            return 0;
+    }
+
     private function retriveIsbnLink($isbn)
     {
         $json = $this->retriveJson("https://www.googleapis.com/books/v1/volumes?q=isbn:$isbn");

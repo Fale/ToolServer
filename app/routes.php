@@ -17,3 +17,4 @@ Route::get('contact', function(){ return View::make('contact');});
 /** ISBN **/
 Route::get('isbn/citaLibro', function(){ return View::make('isbn.citaLibro');});
 Route::get('isbn/citaLibro/{isbn}', Array('uses' => 'IsbnController@isbn'));
+Route::get('isbn/check/{isbn}', Array('uses' => 'IsbnController@checkIsbn'));
