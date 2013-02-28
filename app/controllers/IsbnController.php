@@ -5,12 +5,12 @@ class IsbnController extends BaseController {
     public function cite($project, $isbn)
     {
         if ($project == "itwiki")
-            return $this->isbn($isbn);
+            return $this->itwiki($isbn);
         else
             return "Error: Project not found";
     }
 
-    public function isbn($isbn)
+    public function itwiki($isbn)
     {
         $link = $this->retriveIsbnLink($isbn);
         if (!$link)
