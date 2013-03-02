@@ -6,10 +6,14 @@
     <h1>Welcome to Fale's Cite book tool</h1>
     <form>
         <fieldset>
-            <input class="span2" id="project" type="text" placeholder="Project">
-            <div class="input-append">
+            <div class="input-prepend input-append">
+                <select id="project" class="span2">
+                    <option>itwiki</option>
+                </select>
                 <input class="span2" id="isbn" type="text" placeholder="ISBN">
-                <button class="btn" id="submit" type="button">Create!</button>
+                <div class="btn-group">
+                    <button class="btn" id="submit" type="button">Create!</button>
+                </div>
             </div>
         </fieldset>
     </form>
