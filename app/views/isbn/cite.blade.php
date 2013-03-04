@@ -8,8 +8,8 @@
         <fieldset>
             <div class="input-prepend input-append">
                 <select id="project" class="span2">
-                    <option>itwiki</option>
-                    <option>enwiki</option>
+                    <option {{{ ( Input::get('project') == "itwiki" ) ? ' selected="selected"' : '' }}}>itwiki</option>
+                    <option {{{ ( Input::get('project') == "enwiki" ) ? ' selected="selected"' : '' }}}>enwiki</option>
                 </select>
                 <input class="span2" id="isbn" type="text" placeholder="ISBN">
                 <div class="btn-group">
