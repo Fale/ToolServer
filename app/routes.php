@@ -15,8 +15,8 @@ Route::get('/', function(){ return View::make('home');});
 Route::get('contact', function(){ return View::make('contact');});
 
 /** ISBN **/
-Route::get('isbn/citaLibro', function(){ return View::make('isbn.citaLibro');});
-Route::get('isbn/citaLibro/{isbn}', Array('uses' => 'IsbnController@itwiki'));
+Route::get('isbn/citaLibro', function(){ return Redirect::to('isbn/cite?project=itwiki');});
+Route::get('isbn/citaLibro/{isbn}', function($isbn){ return Redirect::to("isbn/cite/itwiki/$isbn");});
 Route::get('isbn/cite', function(){ return View::make('isbn.cite');});
 Route::get('isbn/cite/{project}/{isbn}', Array('uses' => 'IsbnController@cite'));
 Route::get('isbn/check', function(){ return View::make('isbn.check');});
