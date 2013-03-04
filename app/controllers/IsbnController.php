@@ -4,8 +4,8 @@ class IsbnController extends BaseController {
 
     public function cite($project, $isbn)
     {
-        if ($project == "itwiki")
-            return $this->itwiki($isbn);
+        if (method_exists($this, $project))
+            return $this->{$project}($isbn);
         else
             return "Error: Project not found";
     }
@@ -25,6 +25,20 @@ class IsbnController extends BaseController {
         $data["coautori"] = $this->autori($rawData['volumeInfo']['authors']);
         $data["editore"] = $rawData['volumeInfo']['publisher'];
         return "{{cita libro | " . $this->implode_with_key($data, "=", " | ") . "}}";
+    }
+
+    public function enwiki($isbn)
+    {
+        $link = $this->retriveIsbnLink($isbn);
+        if (!$link)
+            return NULL;
+        $rawData = $this->retriveJson($link);
+        $data = Array();
+        $data["title"] = $rawData['volumeInfo']['title'];
+        $data["id"] = "ISBN " . $isbn;
+        $data["date"] = $rawData['volumeInfo']['publishedDate'];
+        $data["editor-last"] = $rawData['volumeInfo']['publisher'];
+        return "{{cite book | " . $this->implode_with_key($data, "=", " | ") . "}}";
     }
 
     public function checkIsbn($isbn)

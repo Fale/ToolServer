@@ -9,6 +9,7 @@
             <div class="input-prepend input-append">
                 <select id="project" class="span2">
                     <option>itwiki</option>
+                    <option>enwiki</option>
                 </select>
                 <input class="span2" id="isbn" type="text" placeholder="ISBN">
                 <div class="btn-group">
