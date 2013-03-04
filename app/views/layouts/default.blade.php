@@ -32,7 +32,7 @@
                 <a href="#" class="dropdown-toggle {{{ Request::is('~fale/isbn*') ? ' active' : '' }}}" data-toggle="dropdown">ISBN<b class="caret"></b></a>
                 <ul class="dropdown-menu">
                   <li class="{{{ Request::is('~fale/isbn/check') ? ' class="active"' : '' }}}"><a href="/~fale/isbn/check">Check</a></li>
-                  <li class="{{{ Request::is('~fale/isbn/citaLibro*') ? ' class="active"' : '' }}}"><a href="/~fale/isbn/citaLibro">Cita libro</a></li>
+                  <li class="{{{ Request::is('~fale/isbn/cite*') ? ' class="active"' : '' }}}"><a href="/~fale/isbn/cite">Cite Template</a></li>
                 </ul>
               </li>
             </ul>
