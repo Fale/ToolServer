@@ -22,7 +22,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="/~fale">Fale's Tools</a>
+          <a class="brand {{{ Request::is('~fale/') ? ' active' : '' }}}" href="/~fale">Fale's Tools</a>
           <div class="nav-collapse collapse">
             <p class="navbar-text pull-right {{{ Request::is('/~fale/contact') ? ' active' : '' }}}">
               <a href="/~fale/contact" class="navbar-link">Contact</a>
