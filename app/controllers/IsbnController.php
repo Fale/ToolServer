@@ -12,6 +12,7 @@ class IsbnController extends BaseController {
 
     public function itwiki($isbn)
     {
+        $isbn = $this->cleanISBN($isbn);
         $link = $this->retriveIsbnLink($isbn);
         if (!$link)
             return NULL;
@@ -29,6 +30,7 @@ class IsbnController extends BaseController {
 
     public function enwiki($isbn)
     {
+        $isbn = $this->cleanISBN($isbn);
         $link = $this->retriveIsbnLink($isbn);
         if (!$link)
             return NULL;
@@ -43,10 +45,18 @@ class IsbnController extends BaseController {
 
     public function checkIsbn($isbn)
     {
+        $isbn = $this->cleanISBN($isbn);
         if ($this->retriveIsbnLink($isbn))
             return 1;
         else
             return 0;
+    }
+
+    private function cleanISBN($isbn)
+    {
+        $isbn = str_replace(" ","",$isbn);
+        $isbn = str_replace("-","",$isbn);
+        return $isbn;
     }
 
     private function retriveIsbnLink($isbn)
