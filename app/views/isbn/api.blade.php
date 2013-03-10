@@ -13,7 +13,7 @@
                     <li><b>1</b>: ISBN is valid (but it can be another book ISBN)</li>
                 </ul>
         <h3>Templating</h3>
-            To obtein the template for some ISBN code, is enough querying the /~fale/isbn/cite/[PROJECT]/[ISBN NUMBER].
+            To obtain the template for some ISBN code, is enough querying the /~fale/isbn/cite/[PROJECT]/[ISBN NUMBER].
             <h4>Results</h4>
                 The template in plain-text will be returned.
 @stop
