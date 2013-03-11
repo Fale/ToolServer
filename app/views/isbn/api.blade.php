@@ -14,6 +14,12 @@
                 </ul>
         <h3>Templating</h3>
             To obtain the template for some ISBN code, is enough querying the /~fale/isbn/cite/[PROJECT]/[ISBN NUMBER].
+            <h4>Supported projects</h4>
+                At the moment only the following values are supported for the [PROJECT] field:
+                <ul>
+                    <li><em>itwiki</em> for <a href="it.wikipedia.org">it.wikipedia.org</a></li>
+                    <li><em>enwiki</em> for <a href="en.wikipedia.org">en.wikipedia.org</a></li>
+                </ul>
             <h4>Results</h4>
                 The template in plain-text will be returned.
 @stop
