@@ -34,6 +34,8 @@ fixes['regioni'] = {
             # Categories
             r"[Rr]icette regionali-Emilia Romagna",
             r"[Aa]rchitetture barocche dell'Emilia Romagna",
+            r"[Aa]rchitetture gotiche dell'Emilia Romagna",
+            r"[Aa]rchitetture rinascimentali dell'Emilia Romagna",
             # Files
             r'Stemma Comando Regionale Emilia Romagna GDF',
             r'Stemma Comando Regionale Trentino Alto Adige GDF',
