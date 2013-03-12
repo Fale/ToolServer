@@ -22,4 +22,6 @@
                 </ul>
             <h4>Results</h4>
                 The template in plain-text will be returned.
+            <h4>Errors</h4>
+                At this time, if no ISBN code has been found, the response will be <b>empty</b>.
 @stop
