@@ -31,7 +31,9 @@ fixes['regioni'] = {
             r"[Mm]afia, [Cc]amorra e '[Nn]drangheta in [Ee]milia [Rr]omagna",
             r"[Cc]onferenza [Ee]piscopale dell'[Ee]milia [Rr]omagna",
             r"[Pp]olitica del [Tt]erritorio in [Ee]milia [Rr]omagna",
-            r"[R]icette regionali-Emilia Romagna",
+            # Categories
+            r"[Rr]icette regionali-Emilia Romagna",
+            r"[Aa]rchitetture barocche dell'Emilia Romagna",
         ],
     }
 }
