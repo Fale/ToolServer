@@ -22,3 +22,6 @@ Route::get('isbn/cite', function(){ return View::make('isbn.cite');});
 Route::get('isbn/cite/{project}/{isbn}', Array('uses' => 'IsbnController@cite'));
 Route::get('isbn/check', function(){ return View::make('isbn.check');});
 Route::get('isbn/check/{isbn}', Array('uses' => 'IsbnController@checkIsbn'));
+
+/** PyWikipedia **/
+Route::get('pywikipedia/user-fixes', function(){ return View::make('pywikipedia.userfixes');});
