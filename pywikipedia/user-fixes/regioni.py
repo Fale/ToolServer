@@ -14,12 +14,12 @@ fixes['regioni'] = {
         (u"\[\[([Ee]milia) ([Rr]omagna)\]\]", ur"[[\1-\2]]"),
         (u"\|([Ee]milia) ([Rr]omagna)\]\]", ur"|\1-\2]]"),
         (u"\[\[([Ee]milia) ([Rr]omagna)\|", ur"\[\[\1-\2\|"),
-        (u"([Fr]iuli) ([Ve]nezia [Gg]iulia)(?!\])", "\1-\2"),
-        (u"\[\[([Fr]iuli) ([Ve]nezia [Gg]iulia)\]\]", "[[\1-\2]]"),
-        (u"\|([Fr]iuli) ([Ve]nezia [Gg]iulia)\]\]", "|\1-\2]]"),
-        (u"([Tt]rentino) ([Aa]lto [Aa]dige)(?!\])", "\1-\2"),
-        (u"\[\[([Tt]rentino) ([Aa]lto [Aa]dige)\]\]", "[[\1-\2]]"),
-        (u"\|([Tt]rentino) ([Aa]lto [Aa]dige)\]\]", "|\1-\2]]"),
+        (u"([Fr]iuli) ([Ve]nezia [Gg]iulia)(?!\])", ur"\1-\2"),
+        (u"\[\[([Fr]iuli) ([Ve]nezia [Gg]iulia)\]\]", ur"[[\1-\2]]"),
+        (u"\|([Fr]iuli) ([Ve]nezia [Gg]iulia)\]\]", ur"|\1-\2]]"),
+        (u"([Tt]rentino) ([Aa]lto [Aa]dige)(?!\])", ur"\1-\2"),
+        (u"\[\[([Tt]rentino) ([Aa]lto [Aa]dige)\]\]", ur"[[\1-\2]]"),
+        (u"\|([Tt]rentino) ([Aa]lto [Aa]dige)\]\]", ur"|\1-\2]]"),
     ],
     'exceptions': {
         'text-contains': [
