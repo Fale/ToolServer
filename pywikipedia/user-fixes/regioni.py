@@ -1,5 +1,6 @@
 # -*- coding: utf-8  -*-
 
+# TASK: Fix Italian region names
 # USE: python replace.py -log -xml:itwiki-latest-pages-articles.xml -namespace:0 -fix:regioni -pt:60
 # TODO: simplify regex
 # STAT: alpha
