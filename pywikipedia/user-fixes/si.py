@@ -17,10 +17,10 @@ fixes['si'] = {
         (u'([0-9])[°º]( ?[\-–—a] ?[0-9]+)°F\\b', ur'\1\2 °F'), # Sostituzione di x°C con x °C
         (u'([0-9])[°º]C\\b', ur'\1 °C'), # Sostituzione di x°C con x °C
         (u'([0-9])[°º]F\\b', ur'\1 °F'), # Sostituzione di x°C con x °C
-        (u"([0-9]) gr(\s)", "\1 g\2"), # Da gr a g
-        (u"([0-9]) gr(\b)", "\1 g\2"), # Da gr a g
-        (u"\|gr\]\]", "|g]]"), # Da gr a g
-        (u"([0-9]) Kg", "\1 kg"), # Kg a kg, attenzione alle voci di scacchi
+        (u"([0-9]) gr(\s)", ur"\1 g\2"), # Da gr a g
+        (u"([0-9]) gr(\b)", ur"\1 g\2"), # Da gr a g
+        (u"\|gr\]\]", ur"|g]]"), # Da gr a g
+        (u"([0-9]) Kg", ur"\1 kg"), # Kg a kg, attenzione alle voci di scacchi
     ],   
     'exceptions': {
         'title': [
