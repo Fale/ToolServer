@@ -10,13 +10,13 @@ fixes['regioni'] = {
         'it': u'Correggo nome regione'
     },
     'replacements': [
-        (u"([Ee]milia) ([Rr]omagna)(?!\])", ur"\1-\2"),
-        (u"\[\[([Ee]milia) ([Rr]omagna)\]\]", ur"[[\1-\2]]"),
-        (u"\|([Ee]milia) ([Rr]omagna)\]\]", ur"|\1-\2]]"),
-        (u"\[\[([Ee]milia) ([Rr]omagna)\|", ur"\[\[\1-\2\|"),
-        (u"([Fr]iuli) ([Ve]nezia [Gg]iulia)(?!\])", ur"\1-\2"),
-        (u"\[\[([Fr]iuli) ([Ve]nezia [Gg]iulia)\]\]", ur"[[\1-\2]]"),
-        (u"\|([Fr]iuli) ([Ve]nezia [Gg]iulia)\]\]", ur"|\1-\2]]"),
+        (u"[Ee]milia [Rr]omagna", ur"Emilia-Romagna"),
+#        (u"\[\[([Ee]milia) ([Rr]omagna)\]\]", ur"[[\1-\2]]"),
+#        (u"\|([Ee]milia) ([Rr]omagna)\]\]", ur"|\1-\2]]"),
+#        (u"\[\[([Ee]milia) ([Rr]omagna)\|", ur"\[\[\1-\2\|"),
+#        (u"([Fr]iuli) ([Ve]nezia [Gg]iulia)(?!\])", ur"\1-\2"),
+#        (u"\[\[([Fr]iuli) ([Ve]nezia [Gg]iulia)\]\]", ur"[[\1-\2]]"),
+#        (u"\|([Fr]iuli) ([Ve]nezia [Gg]iulia)\]\]", ur"|\1-\2]]"),
         (u"([Tt]rentino) ([Aa]lto [Aa]dige)(?!\])", ur"\1-\2"),
         (u"\[\[([Tt]rentino) ([Aa]lto [Aa]dige)\]\]", ur"[[\1-\2]]"),
         (u"\|([Tt]rentino) ([Aa]lto [Aa]dige)\]\]", ur"|\1-\2]]"),
@@ -30,6 +30,7 @@ fixes['regioni'] = {
             r"[Mm]afia, [Cc]amorra e '[Nn]drangheta in [Ee]milia [Rr]omagna",
             r"[Cc]onferenza [Ee]piscopale dell'[Ee]milia [Rr]omagna",
             r"[Pp]olitica del [Tt]erritorio in [Ee]milia [Rr]omagna",
+            r"[R]icette regionali-Emilia Romagna",
         ],
     }
 }
