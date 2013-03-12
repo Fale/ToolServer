@@ -18,6 +18,10 @@ fixes['regioni'] = {
         (u"[Tt]rentino[ -][Aa]lto-[Aa]dige", ur"Trentino-Alto Adige"),
     ],
     'exceptions': {
+        'inside-tags': [
+            'hyperlink',
+            'link',
+        ],
         'text-contains': [
             r"[Ff]errovie [Ee]milia [Rr]omagna",
             r"[Bb]anca [Pp]opolare dell'[Ee]milia [Rr]omagna",
