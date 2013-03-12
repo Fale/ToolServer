@@ -1,7 +1,6 @@
 # -*- coding: utf-8  -*-
-#
-# USE: python replace.py -log -xml:itwiki-latest-pages-articles.xml -namespace:0 -fix:regioni -pt:60
 
+# USE: python replace.py -log -xml:itwiki-latest-pages-articles.xml -namespace:0 -fix:regioni -pt:60
 # TODO: simplify regex
 # STAT: alpha
 
