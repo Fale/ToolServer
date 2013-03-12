@@ -36,6 +36,12 @@
                   <li class="{{{ Request::is('~fale/isbn/api*') ? ' class="active"' : '' }}}"><a href="/~fale/isbn/api">API</a></li>
                 </ul>
               </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle {{{ Request::is('~fale/pywikipedia*') ? ' active' : '' }}}" data-toggle="dropdown">PyWikipedia<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li class="{{{ Request::is('~fale/pywikipedia/user-fixes/regioni') ? ' class="active"' : '' }}}"><a href="/~fale/pywikipedia/user-fixes/regioni">Regioni</a></li>
+                </ul>
+              </li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
