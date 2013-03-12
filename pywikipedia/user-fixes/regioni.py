@@ -1,0 +1,36 @@
+# -*- coding: utf-8  -*-
+#
+# Esempio d'uso del codice: python replace.py -log -xml:itwiki-latest-pages-articles.xml -namespace:0 -fix:regioni -pt:60
+
+# TODO simplify regex
+# STAT alpha
+
+fixes['regioni'] = {
+    'regex': True,
+    'msg': {
+        'it': u'Correggo nome regione'
+    },
+    'replacements': [
+        (u"([Ee]milia) ([Rr]omagna)(?!\])", ur"\1-\2"),
+        (u"\[\[([Ee]milia) ([Rr]omagna)\]\]", ur"[[\1-\2]]"),
+        (u"\|([Ee]milia) ([Rr]omagna)\]\]", ur"|\1-\2]]"),
+        (u"\[\[([Ee]milia) ([Rr]omagna)\|", ur"\[\[\1-\2\|"),
+        (u"([Fr]iuli) ([Ve]nezia [Gg]iulia)(?!\])", "\1-\2"),
+        (u"\[\[([Fr]iuli) ([Ve]nezia [Gg]iulia)\]\]", "[[\1-\2]]"),
+        (u"\|([Fr]iuli) ([Ve]nezia [Gg]iulia)\]\]", "|\1-\2]]"),
+        (u"([Tt]rentino) ([Aa]lto [Aa]dige)(?!\])", "\1-\2"),
+        (u"\[\[([Tt]rentino) ([Aa]lto [Aa]dige)\]\]", "[[\1-\2]]"),
+        (u"\|([Tt]rentino) ([Aa]lto [Aa]dige)\]\]", "|\1-\2]]"),
+    ],
+    'exceptions': {
+        'text-contains': [
+            r"[Ff]errovie [Ee]milia [Rr]omagna",
+            r"[Bb]anca [Pp]opolare dell'[Ee]milia [Rr]omagna",
+            r"[Aa]tlante on\-line degli [Aa]nfibi e [Rr]ettili dell'[Ee]milia [Rr]omagna",
+            r"[Cc]orpo [Pp]olacco in [Ee]milia [Rr]omagna",
+            r"[Mm]afia, [Cc]amorra e '[Nn]drangheta in [Ee]milia [Rr]omagna",
+            r"[Cc]onferenza [Ee]piscopale dell'[Ee]milia [Rr]omagna",
+            r"[Pp]olitica del [Tt]erritorio in [Ee]milia [Rr]omagna",
+        ],
+    }
+}
