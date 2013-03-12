@@ -12,15 +12,10 @@ fixes['regioni'] = {
     },
     'replacements': [
         (u"[Ee]milia [Rr]omagna", ur"Emilia-Romagna"),
-#        (u"\[\[([Ee]milia) ([Rr]omagna)\]\]", ur"[[\1-\2]]"),
-#        (u"\|([Ee]milia) ([Rr]omagna)\]\]", ur"|\1-\2]]"),
-#        (u"\[\[([Ee]milia) ([Rr]omagna)\|", ur"\[\[\1-\2\|"),
-#        (u"([Fr]iuli) ([Ve]nezia [Gg]iulia)(?!\])", ur"\1-\2"),
-#        (u"\[\[([Fr]iuli) ([Ve]nezia [Gg]iulia)\]\]", ur"[[\1-\2]]"),
-#        (u"\|([Fr]iuli) ([Ve]nezia [Gg]iulia)\]\]", ur"|\1-\2]]"),
-        (u"([Tt]rentino) ([Aa]lto [Aa]dige)(?!\])", ur"\1-\2"),
-        (u"\[\[([Tt]rentino) ([Aa]lto [Aa]dige)\]\]", ur"[[\1-\2]]"),
-        (u"\|([Tt]rentino) ([Aa]lto [Aa]dige)\]\]", ur"|\1-\2]]"),
+        #(u"[Fr]iuli[ -][Ve]nezia [Gg]iulia", ur"Friuli Venezia Giulia"), # Not sure about the consense
+        #(u"[Fr]iuli [Ve]nezia[ -][Gg]iulia", ur"Friuli Venezia Giulia"), # Not sure about the consense
+        (u"[Tt]rentino [Aa]lto [Aa]dige", ur"Trentino-Alto Adige"),
+        (u"[Tt]rentino[ -][Aa]lto-[Aa]dige", ur"Trentino-Alto Adige"),
     ],
     'exceptions': {
         'text-contains': [
@@ -36,9 +31,12 @@ fixes['regioni'] = {
             r"[Aa]rchitetture barocche dell'Emilia Romagna",
             r"[Aa]rchitetture gotiche dell'Emilia Romagna",
             r"[Aa]rchitetture rinascimentali dell'Emilia Romagna",
+            r"[Aa]rchitetture romaniche dell'Emilia-Romagna",
             # Files
             r'Stemma Comando Regionale Emilia Romagna GDF',
             r'Stemma Comando Regionale Trentino Alto Adige GDF',
+            # Templates
+            r'[Pp]iste ciclabili del Trentino-Alto Adige',
         ],
     }
 }
