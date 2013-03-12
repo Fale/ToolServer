@@ -1,9 +1,9 @@
 # -*- coding: utf-8  -*-
 #
-# Esempio d'uso del codice: python replace.py -log -xml:itwiki-latest-pages-articles.xml -namespace:0 -fix:regioni -pt:60
+# USE: python replace.py -log -xml:itwiki-latest-pages-articles.xml -namespace:0 -fix:regioni -pt:60
 
-# TODO simplify regex
-# STAT alpha
+# TODO: simplify regex
+# STAT: alpha
 
 fixes['regioni'] = {
     'regex': True,
