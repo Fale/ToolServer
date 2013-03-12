@@ -41,6 +41,7 @@ fixes['spazi'] = {
             r'color:',
             r'Aiuto:Provincia',
             r'background:',
+            r'<!--(.*)-->',
             r'(?s)\{[^\}]+\}', #Inutile, non produce errori in nessuna voce in Wikiquote; utile per togliere l'exceptinsid template
             r'&[^;]+;',
         ],         
