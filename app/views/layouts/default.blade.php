@@ -40,6 +40,7 @@
                 <a href="#" class="dropdown-toggle {{{ Request::is('~fale/pywikipedia*') ? ' active' : '' }}}" data-toggle="dropdown">PyWikipedia<b class="caret"></b></a>
                 <ul class="dropdown-menu">
                   <li class="{{{ Request::is('~fale/pywikipedia/user-fixes/regioni') ? ' class="active"' : '' }}}"><a href="/~fale/pywikipedia/user-fixes/regioni">Regioni</a></li>
+                  <li class="{{{ Request::is('~fale/pywikipedia/user-fixes/commentiHtml') ? ' class="active"' : '' }}}"><a href="/~fale/pywikipedia/user-fixes/commentiHtml">CommentiHtml</a></li>
                 </ul>
               </li>
             </ul>
