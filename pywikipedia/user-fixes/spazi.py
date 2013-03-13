@@ -14,7 +14,9 @@ fixes['spazi'] = {
     'replacements': [
         (u"([a-zA-Z]) ?([,:;!?]|\.\.\.|…)(\w)", ur"\1\2 \3"),
         (u"([a-zA-Z]) ?([\"»]) ?([,:;!?]|\.\.\.|…)(\w)", ur"\1\2\3 \4"),
-        (u"([a-z]) ?\.([A-Z][a-z]+\\b)", ur"\1. \2"),   
+        (u"([a-z]) ?\.([A-Z][a-z]+\\b)", ur"\1. \2"),
+        (u"(l)' ", ur"\1'"),
+        (r'&nbsp;', r' '),
     ],   
     'exceptions': {
         'inside-tags': [
@@ -28,16 +30,14 @@ fixes['spazi'] = {
             'source',
             'math',
             #'table',    
-            #'gallery',
-            #'timeline',
+            'gallery',
+            'timeline',
         ],
         'inside': [
             #r'\[[^\]]+\]', #Per esagerare colle precauzioni ed evitare errori come in Italo_Calvino#Collegamenti_esterni
             #r'\[http[^ ]+([,:;!?]|\.\.\.|…)[^ ]+ .+\]', #Se si volesse salvare solo l'indirizzo e non il titolo
+            r'[Image|File|Immagine]:.*\.[png|jpg|svg]', #Images
             r'(?s)<[^>]+>',
-            r'[Ff]ile:',
-            r'[Ii]mage:',
-            r'[Ii]mmagine:',
             r'color:',
             r'Aiuto:Provincia',
             r'background:',
