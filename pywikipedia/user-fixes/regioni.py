@@ -40,7 +40,8 @@ fixes['regioni'] = {
             r'Stemma Comando Regionale Emilia Romagna GDF',
             r'Stemma Comando Regionale Trentino Alto Adige GDF',
             # Templates
-            r'[Pp]iste ciclabili del Trentino-Alto Adige',
+            r'[Pp]iste ciclabili del Trentino Alto Adige',
+            r'[Rr]eti TV Emilia Romagna',
         ],
     }
 }
