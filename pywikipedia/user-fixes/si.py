@@ -21,6 +21,7 @@ fixes['si'] = {
         (u"([0-9]) gr(\b)", ur"\1 g\2"), # Da gr a g
         (u"\|gr\]\]", ur"|g]]"), # Da gr a g
         (u"([0-9]) Kg", ur"\1 kg"), # Kg a kg, attenzione alle voci di scacchi
+        (u"([0-9]) [Kk]g\. ([a-z])", ur"\1 kg \2"), # Kg a kg, attenzione alle voci di scacchi
     ],   
     'exceptions': {
         'title': [
