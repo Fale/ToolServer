@@ -26,6 +26,7 @@ fixes['si'] = {
     'exceptions': {
         'title': [
             u'Studio 4°C', # Per °C
+            u'Difesa siciliana, variante Svešnikov', # Per Kg
         ],
         'inside-tags': [
             'hyperlink',    
@@ -35,6 +36,7 @@ fixes['si'] = {
             'math',
         ],
         'inside': [
+            u'Studio 4°C', # Per °C
             u'groszy', # Da gr a g
             u'groschen', # Da gr a g
         ],         
