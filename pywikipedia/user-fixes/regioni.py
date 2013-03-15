@@ -48,7 +48,6 @@ fixes['regioni'] = {
             (u"\bmolise\b", u"Molise"),
         #Piemonte
             (u"\bpiemonte\b", ur"Piemonte"),
-            (u"[Dd]ucato[ _-]{1,2}[Dd]i [Ss]avoia", u"Ducato di Savoia"),
         #Puglia
             (u"\bpuglia\b", u"Puglia"),
         #Sardegna
@@ -63,7 +62,6 @@ fixes['regioni'] = {
             (u"\bumbria\b", u"Umbria"),
         #Valle d'Aosta
             (u"[Vv]alle[ _-]d[’`' _][Aa]osta", ur"Valle d'Aosta"),
-            (u"[Dd]ucato[ _-]d[’`' _][Aa]osta", u"Ducato d'Aosta"),
         #Veneto
             (u"\bveneto\b", u"Veneto"),
 
