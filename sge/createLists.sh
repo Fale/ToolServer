@@ -1,3 +1,5 @@
+#!/bin/sh
+
 qcronsub -N ducati $HOME/ToolServer/sge/wrapper/ducati.sh
 qcronsub -N regioni $HOME/ToolServer/sge/wrapper/regioni.sh
 qcronsub -N si $HOME/ToolServer/sge/wrapper/si.sh
