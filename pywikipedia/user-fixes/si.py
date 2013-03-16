@@ -27,7 +27,7 @@ fixes['si'] = {
         (u"([0-9]) Km", ur"\1 km"), # Km a km
         (u"([0-9]) [Kk]m\. ([a-z])", ur"\1 km \2"), # Km a km
         (u"([0-9]) [Kk]m\.([,:;\.!\?\"»]|\.\.\.|…)", ur"\1 km\2"), # Km a km
-        (u"([IVXLCDM]+)°", ur"\1"), #Correggo numeri romani
+        (u"\b([IVXLCDM]+)°", ur"\1"), #Correggo numeri romani
     ],   
     'exceptions': {
         'title': [
