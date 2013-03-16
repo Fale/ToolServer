@@ -21,13 +21,13 @@ fixes['si'] = {
 #        (u"([0-9]) gr(\s)", ur"\1 g\2"), # Da gr a g
 #        (u"([0-9]) gr(\b)", ur"\1 g\2"), # Da gr a g
 #        (u"\|gr\]\]", ur"|g]]"), # Da gr a g
-        (u"([0-9]) Kg", ur"\1 kg"), # Kg a kg, attenzione alle voci di scacchi
-        (u"([0-9]) [Kk]g\. ([a-z])", ur"\1 kg \2"), # Kg a kg, attenzione alle voci di scacchi
-        (u"([0-9]) [Kk]g\.([,:;\.!\?\"»]|\.\.\.|…)", ur"\1 kg\2"), # Kg a kg, attenzione alle voci di scacchi
-        (u"([0-9]) Km", ur"\1 km"), # Km a km
-        (u"([0-9]) [Kk]m\. ([a-z])", ur"\1 km \2"), # Km a km
-        (u"([0-9]) [Kk]m\.([,:;\.!\?\"»]|\.\.\.|…)", ur"\1 km\2"), # Km a km
-        (u"\b([IVXLCDM]+)°", ur"\1"), #Correggo numeri romani
+        (u"([0-9]) Kg\\b", ur"\1&nbsp;kg"), # Kg a kg, attenzione alle voci di scacchi
+        (u"([0-9]) [Kk]g\. ([a-z])", ur"\1 kg&nbsp;\2"), # Kg a kg, attenzione alle voci di scacchi
+        (u"([0-9]) [Kk]g\.([,:;\.!\?\"»]|\.\.\.|…)", ur"\1&nbsp;kg\2"), # Kg a kg, attenzione alle voci di scacchi
+        (u"([0-9]) Km\\b", ur"\1&nbsp;km"), # Km a km
+        (u"([0-9]) [Kk]m\. ([a-z])", ur"\1&nbsp;km \2"), # Km a km
+        (u"([0-9]) [Kk]m\.([,:;\.!\?\"»]|\.\.\.|…)", ur"\1&nbsp;km\2"), # Km a km
+        (u"\\b([IVXLCDM]+)°", ur"\1"), #Correggo numeri romani
     ],   
     'exceptions': {
         'title': [
