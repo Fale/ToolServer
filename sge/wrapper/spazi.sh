@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 #A wrapper-script for the Spazi rules.
-#$ -l h_rt=24:00:00
+#$ -l h_rt=23:00:00
 #$ -l virtual_free=100M
 #$ -l arch=*
 #$ -l fs-user-store=1
