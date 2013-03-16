@@ -15,7 +15,7 @@ fixes['si'] = {
         #(u"(\s|\|)([1-9]{1,3}( [0-9]{3})*)(\s)", ur"\1\2 \3"), # Sostituzione spazio tra cifre
         (u'([0-9])[°º]( ?[\-–—a] ?[0-9]+)°C\\b', ur'\1\2 °C'), # Sostituzione di x°C con x °C
         (u'([0-9])[°º]( ?[\-–—a] ?[0-9]+)°F\\b', ur'\1\2 °F'), # Sostituzione di x°C con x °C
-        (u'([0-9])[ °º]C\\b', ur'\1&nbsp;°C'), # Sostituzione di x°C con x °C
+        (u'([0-9])[ ?][°º]C\\b', ur'\1&nbsp;°C'), # Sostituzione di x°C con x °C
 #        (u'([0-9])[°º]F\\b', ur'\1 °F'), # Sostituzione di x°C con x °C
 #        (u"([0-9]) gr(\s)", ur"\1 g\2"), # Da gr a g
 #        (u"([0-9]) gr(\b)", ur"\1 g\2"), # Da gr a g
