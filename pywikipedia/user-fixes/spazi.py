@@ -36,6 +36,7 @@ fixes['spazi'] = {
         'inside': [
             #r'\[[^\]]+\]', #Per esagerare colle precauzioni ed evitare errori come in Italo_Calvino#Collegamenti_esterni
             #r'\[http[^ ]+([,:;!?]|\.\.\.|…)[^ ]+ .+\]', #Se si volesse salvare solo l'indirizzo e non il titolo
+            u'{{sic|(.*)}}',
             r'[Image|File|Immagine]:.*\.[png|jpg|svg]', #Images
             r'(?s)<[^>]+>',
             r'color:',
