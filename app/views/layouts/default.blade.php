@@ -39,6 +39,7 @@
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle {{{ Request::is('~fale/pywikipedia*') ? ' active' : '' }}}" data-toggle="dropdown">PyWikipedia<b class="caret"></b></a>
                 <ul class="dropdown-menu">
+                  <li class="{{{ Request::is('~fale/pywikipedia/user-fixes/2spazi') ? ' class="active"' : '' }}}"><a href="/~fale/pywikipedia/user-fixes/2spazi">2 Spazi</a></li>
                   <li class="{{{ Request::is('~fale/pywikipedia/user-fixes/che') ? ' class="active"' : '' }}}"><a href="/~fale/pywikipedia/user-fixes/che">Che</a></li>
                   <li class="{{{ Request::is('~fale/pywikipedia/user-fixes/ducati') ? ' class="active"' : '' }}}"><a href="/~fale/pywikipedia/user-fixes/ducati">Ducati</a></li>
                   <li class="{{{ Request::is('~fale/pywikipedia/user-fixes/commentiHtml') ? ' class="active"' : '' }}}"><a href="/~fale/pywikipedia/user-fixes/commentiHtml">CommentiHtml</a></li>
