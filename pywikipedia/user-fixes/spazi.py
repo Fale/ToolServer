@@ -16,7 +16,6 @@ fixes['spazi'] = {
         (u"([a-zA-Z]) ?([\"»]) ?([,:;!?]|\.\.\.|…)(\w)", ur"\1\2\3 \4"),
         (u"([a-z]) ?\.([A-Z][a-z]+\\b)", ur"\1. \2"),
         (u"(l)' ", ur"\1'"),
-        (u'([a-zA-Z]|[,:;!?]|\.\.\.|…)[ ]{2,3}([a-zA-Z]|[,:;!?]|\.\.\.|…)', ur'\1 \2'), #Correggo spazi doppi e tripli
     ],   
     'exceptions': {
         'inside-tags': [
