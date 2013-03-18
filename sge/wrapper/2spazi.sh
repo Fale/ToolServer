@@ -6,8 +6,8 @@
 #$ -l arch=*
 #$ -l fs-user-store=1
 
-$NDATE = $(date + "%Y%m%d")
-$NTIME = $(date + "%H%M")
+NDATE=$(date + "%Y%m%d")
+NTIME=$(date + "%H%M")
 
 mkdir -p /home/fale/lists/$NDATE
 
