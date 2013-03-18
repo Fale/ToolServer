@@ -4,7 +4,7 @@
 # USE: python replace.py -log -xml:itwiki-latest-pages-articles.xml -namespace:0 -fix:2spazi -pt:60
 # STAT: beta
 
-fixes['spazi'] = {
+fixes['2spazi'] = {
     'regex': True,
     'msg': {
         'it':u'Correggo gli spazi doppi'
