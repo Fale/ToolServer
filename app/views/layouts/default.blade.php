@@ -43,6 +43,7 @@
                   <li class="{{{ Request::is('~fale/pywikipedia/user-fixes/che') ? ' class="active"' : '' }}}"><a href="/~fale/pywikipedia/user-fixes/che">Che</a></li>
                   <li class="{{{ Request::is('~fale/pywikipedia/user-fixes/ducati') ? ' class="active"' : '' }}}"><a href="/~fale/pywikipedia/user-fixes/ducati">Ducati</a></li>
                   <li class="{{{ Request::is('~fale/pywikipedia/user-fixes/commentiHtml') ? ' class="active"' : '' }}}"><a href="/~fale/pywikipedia/user-fixes/commentiHtml">CommentiHtml</a></li>
+                  <li class="{{{ Request::is('~fale/pywikipedia/user-fixes/passati') ? ' class="active"' : '' }}}"><a href="/~fale/pywikipedia/user-fixes/passati">Passati</a></li>
                   <li class="{{{ Request::is('~fale/pywikipedia/user-fixes/regioni') ? ' class="active"' : '' }}}"><a href="/~fale/pywikipedia/user-fixes/regioni">Regioni</a></li>
                   <li class="{{{ Request::is('~fale/pywikipedia/user-fixes/si') ? ' class="active"' : '' }}}"><a href="/~fale/pywikipedia/user-fixes/si">SI</a></li>
                   <li class="{{{ Request::is('~fale/pywikipedia/user-fixes/spazi') ? ' class="active"' : '' }}}"><a href="/~fale/pywikipedia/user-fixes/spazi">Spazi</a></li>

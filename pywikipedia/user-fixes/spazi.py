@@ -16,7 +16,7 @@ fixes['spazi'] = {
         (u"([a-zA-Z]) ?([\"»]) ?([,:;!?]|\.\.\.|…)(\w)", ur"\1\2\3 \4"),
         (u"([a-z]) ?\.([A-Z][a-z]+\\b)", ur"\1. \2"),
         (u"(l)' ", ur"\1'"),
-        (r'&nbsp;', r' '),
+        (u'([a-zA-Z]|[,:;!?]|\.\.\.|…)[ ]{2,3}([a-zA-Z]|[,:;!?]|\.\.\.|…)', ur'\1 \2'), #Correggo spazi doppi e tripli
     ],   
     'exceptions': {
         'inside-tags': [
@@ -35,7 +35,7 @@ fixes['spazi'] = {
         ],
         'inside': [
             #r'\[[^\]]+\]', #Per esagerare colle precauzioni ed evitare errori come in Italo_Calvino#Collegamenti_esterni
-            #r'\[http[^ ]+([,:;!?]|\.\.\.|…)[^ ]+ .+\]', #Se si volesse salvare solo l'indirizzo e non il titolo
+            r'\[http[^ ]+([,:;!?]|\.\.\.|…)[^ ]+ .+\]', #Se si volesse salvare solo l'indirizzo e non il titolo
             u'{{sic|(.*)}}',
             r'[Image|File|Immagine]:.*\.[png|jpg|svg]', #Images
             r'(?s)<[^>]+>',

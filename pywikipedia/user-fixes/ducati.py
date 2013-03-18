@@ -71,6 +71,8 @@ fixes['ducati'] = {
         (u"\\b[Dd]ucato[ _-]{1,2}[Dd]i[ _-]{1,2}[Ss]assonia", u"Ducato di Sassonia"),
         (u"\\b[Dd]ucato[ _-]{1,2}[Dd]i[ _-]{1,2}[Ss]vevia", u"Ducato di Svevia"),
         (u"\\b[Dd]ucato[ _-]{1,2}[Dd]i[ _-]{1,2}[Vv]estfalia", u"Ducato di Vestfalia"),
+
+        (u'([a-zA-Z]|[,:;!?]|\.\.\.|…)[ ]{2,3}([a-zA-Z]|[,:;!?]|\.\.\.|…)', ur'\1 \2'), #Correggo spazi doppi e tripli
     ],
     'exceptions': {
         'inside-tags': [
