@@ -1,7 +1,6 @@
 {
 	"require": {
 		"laravel/framework": "4.0.*",
-		"twitter/bootstrap": "2.3.0",
 		"easybook/geshi": "dev-master"
 	},
 	"autoload": {
