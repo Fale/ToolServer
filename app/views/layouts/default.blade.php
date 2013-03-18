@@ -5,7 +5,7 @@
     <title>Fale's ToolServer - @yield('title')</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Fabio Alessandro Locati">
-    <link rel="stylesheet" type="text/css" href="{{ url('bootstrap/css/bootstrap.min.css') }}" />
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <style>
       body {
@@ -63,7 +63,7 @@
                  alt="Fork me on GitHub" />
         </a>
     </body>
-    <script type="text/javascript" src="{{ url('bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
     <script type="text/javascript">
 
         var _gaq = _gaq || [];
