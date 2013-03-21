@@ -1,9 +1,14 @@
 ToolServer
 ==========
 
-Code of my ToolServer public_html zone
+Code of my ToolServer publichtml zone
 
-== Installation ==
+License
+-------
+All data in this repository are under the [AGPL license v3][http://www.gnu.org/licenses/agpl-3.0.html]
+
+Installation
+------------
     git clone https://github.com/Fale/ToolServer.git
     cd ToolServer
     php composer.phar install
