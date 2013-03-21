@@ -1,11 +1,11 @@
 ToolServer
 ==========
 
-Code of my ToolServer publichtml zone
+Code of my ToolServer publichtml zone, pywikipedia rules and SGE commands to execute the pywikipedia rules
 
 License
 -------
-All data in this repository are under the [AGPL license v3][http://www.gnu.org/licenses/agpl-3.0.html]
+All data in this repository are under the [AGPLv3 license](http://www.gnu.org/licenses/agpl-3.0.html)
 
 Installation
 ------------
