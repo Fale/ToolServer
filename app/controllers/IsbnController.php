@@ -25,8 +25,6 @@ class IsbnController extends BaseController {
             $data["anno"] = $d["anno"];
             $data["mese"] = $d["mese"];
             $data["giorno"] = $d["giorno"];
-        } else
-            $data["anno"] = "????";
         $data["coautori"] = $this->autori($rawData['volumeInfo']['authors']);
         $data["editore"] = $rawData['volumeInfo']['publisher'];
         $data["id"] = "ISBN " . $isbn;
