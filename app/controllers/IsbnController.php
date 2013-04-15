@@ -19,12 +19,17 @@ class IsbnController extends BaseController {
         $rawData = $this->retriveJson($link);
         $data = Array();
         $data["titolo"] = $rawData['volumeInfo']['title'];
-        $data["id"] = "ISBN " . $isbn;
-        $data["anno"] = date("Y", strtotime($rawData['volumeInfo']['publishedDate']));
-        $data["mese"] = $this->mese($rawData['volumeInfo']['publishedDate']);
-        $data["giorno"] = date("d", strtotime($rawData['volumeInfo']['publishedDate']));
+        $d = $this->data($rawData);
+        if (array_key_exists("anno", $d))
+        {
+            $data["anno"] = $d["anno"];
+            $data["mese"] = $d["mese"];
+            $data["giorno"] = $d["giorno"];
+        } else
+            $data["anno"] = "????";
         $data["coautori"] = $this->autori($rawData['volumeInfo']['authors']);
         $data["editore"] = $rawData['volumeInfo']['publisher'];
+        $data["id"] = "ISBN " . $isbn;
         return "{{cita libro | " . $this->implode_with_key($data, "=", " | ") . "}}";
     }
 
@@ -95,7 +100,19 @@ class IsbnController extends BaseController {
         return implode ("; ", $datas);
     }
 
-    private function mese($data)
+    private function data($rawData)
+    {
+        $d = Array();
+        $d["anno"] = date("Y", strtotime($rawData['volumeInfo']['publishedDate']));
+        $d["mese"] = $this->mese($rawData['volumeInfo']['publishedDate']);
+        $d["giorno"] = date("d", strtotime($rawData['volumeInfo']['publishedDate']));
+        if( $d["anno"] == date('Y') && $d["mese"] == $this->mese() && $d["giorno"] == date("d"))
+            return Array();
+        else
+            return $d;
+    }
+
+    private function mese($data = null)
     {
         $mesi = Array(
             '01' => "gennaio",
@@ -111,7 +128,10 @@ class IsbnController extends BaseController {
             '11' => "novembre",
             '12' => "dicembre"
         );
-        $mese = date("m", strtotime($data));
+        if ($data)
+            $mese = date("m", strtotime($data));
+        else
+            $mese = date("m");
         if (isSet($mese) AND $mese > 0 AND $mese < 13)
             return $mesi[$mese];
         else
