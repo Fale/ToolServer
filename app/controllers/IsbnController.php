@@ -2,6 +2,8 @@
 
 class IsbnController extends BaseController {
 
+    public $kind;
+
     public function cite($project, $isbn)
     {
         if (method_exists($this, $project))
@@ -22,9 +24,13 @@ class IsbnController extends BaseController {
         $d = $this->data($rawData);
         if (array_key_exists("anno", $d))
         {
-            $data["anno"] = $d["anno"];
-            $data["mese"] = $d["mese"];
-            $data["giorno"] = $d["giorno"];
+            if ($this->kind == "books#volumes")
+                $data["anno"] = $d["anno"];
+            else {
+                $data["anno"] = $d["anno"];
+                $data["mese"] = $d["mese"];
+                $data["giorno"] = $d["giorno"];
+            }
         }
         $data["coautori"] = $this->autori($rawData['volumeInfo']['authors']);
         $data["editore"] = $rawData['volumeInfo']['publisher'];
@@ -66,10 +72,12 @@ class IsbnController extends BaseController {
     private function retriveIsbnLink($isbn)
     {
         $json = $this->retriveJson("https://www.googleapis.com/books/v1/volumes?q=isbn:$isbn");
-        if (array_key_exists('kind', $json))
+        if (array_key_exists('kind', $json)){
+            $this->kind = $json['kind'];
             if (array_key_exists('totalItems', $json))
                 if ($json['totalItems'] > 0)
                     return $json['items']['0']['selfLink'];
+        }
         return NULL;
     }
 
@@ -102,16 +110,13 @@ class IsbnController extends BaseController {
     private function data($rawData)
     {
         $d = Array();
-        $d["anno"] = date("Y", strtotime($rawData['volumeInfo']['publishedDate']));
-        $d["mese"] = $this->mese($rawData['volumeInfo']['publishedDate']);
-        $d["giorno"] = date("d", strtotime($rawData['volumeInfo']['publishedDate']));
-        if( $d["anno"] == date('Y') && $d["mese"] == $this->mese() && $d["giorno"] == date("d"))
-            return Array();
-        else
-            return $d;
+        $d["anno"] = substr($rawData['volumeInfo']['publishedDate'], 0, 4);
+        $d["mese"] = $this->mese(substr($rawData['volumeInfo']['publishedDate'], 5, 2));
+        $d["giorno"] = substr($rawData['volumeInfo']['publishedDate'], 8, 2);
+        return $d;
     }
 
-    private function mese($data = null)
+    private function mese($month)
     {
         $mesi = Array(
             '01' => "gennaio",
@@ -127,12 +132,8 @@ class IsbnController extends BaseController {
             '11' => "novembre",
             '12' => "dicembre"
         );
-        if ($data)
-            $mese = date("m", strtotime($data));
-        else
-            $mese = date("m");
-        if (isSet($mese) AND $mese > 0 AND $mese < 13)
-            return $mesi[$mese];
+        if (isSet($month) AND $month > 0 AND $month < 13)
+            return $mesi[$month];
         else
             return null;
     }
