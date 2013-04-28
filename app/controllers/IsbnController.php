@@ -14,7 +14,7 @@ class IsbnController extends BaseController {
 
     public function itwiki($isbn)
     {
-        $isbn = $this->cleanISBN($isbn);
+        $isbn = Isbn\Hyphens::removeHyphens($isbn);
         $link = $this->retriveIsbnLink($isbn);
         if (!$link)
             return NULL;
@@ -34,7 +34,7 @@ class IsbnController extends BaseController {
         }
         $data["coautori"] = $this->autori($rawData['volumeInfo']['authors']);
         $data["editore"] = $rawData['volumeInfo']['publisher'];
-        $data["id"] = "ISBN " . $isbn;
+        $data["id"] = "ISBN " . Isbn\Hyphens::addHyphens($isbn);
         return "{{cita libro | " . $this->implode_with_key($data, "=", " | ") . "}}";
     }
 
