@@ -34,7 +34,16 @@ class IsbnController extends BaseController {
         }
         $data["coautori"] = $this->autori($rawData['volumeInfo']['authors']);
         $data["editore"] = $rawData['volumeInfo']['publisher'];
-        $data["id"] = "ISBN " . Isbn\Hyphens::addHyphens($isbn);
+        if ($data["anno"] < 2007)
+            if (Isbn\Check::is13($isbn))
+                $data["id"] = "ISBN " . Isbn\Hyphens::fixHyphens(Isbn\Translate::to10($isbn));
+            else
+                $data["id"] = "ISBN " . Isbn\Hyphens::fixHyphens($isbn);
+        else
+            if (Isbn\Check::is10($isbn))
+                $data["id"] = "ISBN " . Isbn\Hyphens::fixHyphens(Isbn\Translate::to13($isbn));
+            else
+                $data["id"] = "ISBN " . Isbn\Hyphens::fixHyphens($isbn);
         return "{{cita libro | " . $this->implode_with_key($data, "=", " | ") . "}}";
     }
 
