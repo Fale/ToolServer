@@ -42,7 +42,7 @@
                     },
                     error: function()
                     {
-                        $("#result").html("Google Books not avilable");
+                        $("#result").html("Google Books not available");
                         result.className = 'alert alert-error';
                     }
                 });
