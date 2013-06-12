@@ -1,5 +1,8 @@
 #!/bin/sh
 
+rm $HOME/pywikipedia/*.pyc
+
+# Execute the scripts needed
 qcronsub -N regioni $HOME/ToolServer/sge/wrapper/regioni.sh
 qcronsub -N ducati $HOME/ToolServer/sge/wrapper/ducati.sh
 qcronsub -N si $HOME/ToolServer/sge/wrapper/si.sh
