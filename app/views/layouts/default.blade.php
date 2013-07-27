@@ -22,22 +22,22 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand {{{ Request::is('~fale/') ? ' active' : '' }}}" href="/~fale">Fale's Tools</a>
+          <a class="brand{{Request::is('~fale/') ? ' active' : '' }}" href="/~fale">Fale's Tools</a>
           <div class="nav-collapse collapse">
-            <p class="navbar-text pull-right {{{ Request::is('/~fale/contact') ? ' active' : '' }}}">
+            <p class="navbar-text pull-right{{Request::is('/~fale/contact') ? ' active' : '' }}">
               <a href="/~fale/contact" class="navbar-link">Contact</a>
             </p>
             <ul class="nav">
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle {{{ Request::is('~fale/isbn*') ? ' active' : '' }}}" data-toggle="dropdown">ISBN<b class="caret"></b></a>
+                <a href="#" class="dropdown-toggle{{Request::is('~fale/isbn*') ? ' active' : '' }}" data-toggle="dropdown">ISBN<b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                  <li class="{{{ Request::is('~fale/isbn/check') ? ' class="active"' : '' }}}"><a href="/~fale/isbn/check">Check</a></li>
-                  <li class="{{{ Request::is('~fale/isbn/cite*') ? ' class="active"' : '' }}}"><a href="/~fale/isbn/cite">Cite Template</a></li>
-                  <li class="{{{ Request::is('~fale/isbn/api*') ? ' class="active"' : '' }}}"><a href="/~fale/isbn/api">API</a></li>
+                  <li {{ Request::is('~fale/isbn/check') ? ' class="active"' : '' }}><a href="/~fale/isbn/check">Check</a></li>
+                  <li {{ Request::is('~fale/isbn/cite*') ? ' class="active"' : '' }}><a href="/~fale/isbn/cite">Cite Template</a></li>
+                  <li {{ Request::is('~fale/isbn/api*') ? ' class="active"' : '' }}><a href="/~fale/isbn/api">API</a></li>
                 </ul>
               </li>
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle {{{ Request::is('~fale/pywikipedia*') ? ' active' : '' }}}" data-toggle="dropdown">PyWikipedia<b class="caret"></b></a>
+                <a href="#" class="dropdown-toggle{{Request::is('~fale/pywikipedia*') ? ' active' : '' }}" data-toggle="dropdown">PyWikipedia<b class="caret"></b></a>
                 <ul class="dropdown-menu">
                   <li class="{{{ Request::is('~fale/pywikipedia/user-fixes/2spazi') ? ' class="active"' : '' }}}"><a href="/~fale/pywikipedia/user-fixes/2spazi">2 Spazi</a></li>
                   <li class="{{{ Request::is('~fale/pywikipedia/user-fixes/che') ? ' class="active"' : '' }}}"><a href="/~fale/pywikipedia/user-fixes/che">Che</a></li>
