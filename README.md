@@ -1,5 +1,5 @@
-ToolServer
-==========
+ISBN2TPL
+========
 
 Code of my ToolServer publichtml zone, pywikipedia rules and SGE commands to execute the pywikipedia rules
 

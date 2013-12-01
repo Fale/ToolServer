@@ -5,7 +5,7 @@
     <title>Fale's ToolServer - @yield('title')</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Fabio Alessandro Locati">
-    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <style>
       body {
@@ -15,43 +15,25 @@
   </head>
   <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand{{Request::is('~fale/') ? ' active' : '' }}" href="/~fale">Fale's Tools</a>
-          <div class="nav-collapse collapse">
-            <p class="navbar-text pull-right{{Request::is('/~fale/contact') ? ' active' : '' }}">
-              <a href="/~fale/contact" class="navbar-link">Contact</a>
-            </p>
-            <ul class="nav">
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle{{Request::is('~fale/isbn*') ? ' active' : '' }}" data-toggle="dropdown">ISBN<b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <li{{ Request::is('~fale/isbn/check') ? ' class="active"' : '' }}><a href="/~fale/isbn/check">Check</a></li>
-                  <li{{ Request::is('~fale/isbn/cite*') ? ' class="active"' : '' }}><a href="/~fale/isbn/cite">Cite Template</a></li>
-                  <li{{ Request::is('~fale/isbn/api*') ? ' class="active"' : '' }}><a href="/~fale/isbn/api">API</a></li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle{{Request::is('~fale/pywikipedia*') ? ' active' : '' }}" data-toggle="dropdown">PyWikipedia<b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <li{{ Request::is('~fale/pywikipedia/user-fixes/2spazi') ? ' class="active"' : '' }}><a href="/~fale/pywikipedia/user-fixes/2spazi">2 Spazi</a></li>
-                  <li{{ Request::is('~fale/pywikipedia/user-fixes/che') ? ' class="active"' : '' }}><a href="/~fale/pywikipedia/user-fixes/che">Che</a></li>
-                  <li{{ Request::is('~fale/pywikipedia/user-fixes/ducati') ? ' class="active"' : '' }}><a href="/~fale/pywikipedia/user-fixes/ducati">Ducati</a></li>
-                  <li{{ Request::is('~fale/pywikipedia/user-fixes/commentiHtml') ? ' class="active"' : '' }}><a href="/~fale/pywikipedia/user-fixes/commentiHtml">CommentiHtml</a></li>
-                  <li{{ Request::is('~fale/pywikipedia/user-fixes/passati') ? ' class="active"' : '' }}><a href="/~fale/pywikipedia/user-fixes/passati">Passati</a></li>
-                  <li{{ Request::is('~fale/pywikipedia/user-fixes/punteggiatura') ? ' class="active"' : '' }}><a href="/~fale/pywikipedia/user-fixes/punteggiatura">Punteggiatura</a></li>
-                  <li{{ Request::is('~fale/pywikipedia/user-fixes/regioni') ? ' class="active"' : '' }}><a href="/~fale/pywikipedia/user-fixes/regioni">Regioni</a></li>
-                  <li{{ Request::is('~fale/pywikipedia/user-fixes/si') ? ' class="active"' : '' }}><a href="/~fale/pywikipedia/user-fixes/si">SI</a></li>
-                  <li{{ Request::is('~fale/pywikipedia/user-fixes/spazi') ? ' class="active"' : '' }}><a href="/~fale/pywikipedia/user-fixes/spazi">Spazi</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div><!--/.nav-collapse -->
+          <a class="navbar-brand" href="/">ISBN2Tpl</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <p class="navbar-text pull-right{{Request::is('/~fale/contact') ? ' active' : '' }}">
+            {{ link_to_route('contact', 'Contact', array(), array('class' => 'navbar-link')) }}
+          </p>
+          <ul class="nav navbar-nav">
+            <li{{ Request::is('/check') ? ' class="active"' : '' }}>{{ link_to_route('check', 'Check')}}<li>
+            <li{{ Request::is('/cite*') ? ' class="active"' : '' }}>{{ link_to_route('cite', 'Cite Template')}}</li>
+            <li{{ Request::is('/api*') ? ' class="active"' : '' }}>{{ link_to_route('api', 'API')}}</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -64,7 +46,7 @@
                  alt="Fork me on GitHub" />
         </a>
     </body>
-    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
     <script type="text/javascript">
 
         var _gaq = _gaq || [];

@@ -1,27 +1,34 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the Closure to execute when that URI is requested.
-|
-*/
+Route::get('/', array(
+	'as' => 'home',
+	function(){ return View::make('home');}
+));
 
-Route::get('/', function(){ return View::make('home');});
-Route::get('contact', function(){ return View::make('contact');});
+Route::get('api', array(
+	'as' => 'api',
+	function(){ return View::make('api');}
+));
 
-/** ISBN **/
-Route::get('isbn/api', function(){ return View::make('isbn.api');});
-Route::get('isbn/citaLibro', function(){ return Redirect::to('isbn/cite?project=itwiki');});
-Route::get('isbn/citaLibro/{isbn}', function($isbn){ return Redirect::to("isbn/cite/itwiki/$isbn");});
-Route::get('isbn/cite', function(){ return View::make('isbn.cite');});
-Route::get('isbn/cite/{project}/{isbn}', Array('uses' => 'IsbnController@cite'));
-Route::get('isbn/check', function(){ return View::make('isbn.check');});
-Route::get('isbn/check/{isbn}', Array('uses' => 'IsbnController@checkIsbn'));
+Route::get('cite', array(
+	'as' => 'cite',
+	function(){ return View::make('cite');}
+));
 
-/** PyWikipedia **/
-Route::get('pywikipedia/user-fixes/{file}', function($file){return View::make('pywikipedia.userfixes')->with('file', $file);});
+Route::get('cite/{project}/{isbn}', array(
+	'uses' => 'IsbnController@cite'
+));
+
+Route::get('check', array(
+	'as' => 'check',
+	function(){ return View::make('check');}
+));
+
+Route::get('check/{isbn}', array(
+	'uses' => 'IsbnController@checkIsbn'
+));
+
+Route::get('contact', array(
+	'as' => 'contact',
+	function(){ return View::make('contact');}
+));
