@@ -1,7 +1,7 @@
 <?php
 
-Route::group(array('prefix' => 'isbn2tpl'), function()
-{
+//Route::group(array('prefix' => 'isbn2tpl'), function()
+//{
 
     Route::get('/', array(
         'as' => 'home',
@@ -36,4 +36,4 @@ Route::group(array('prefix' => 'isbn2tpl'), function()
         function(){ return View::make('contact');}
     ));
 
-});
+//});
