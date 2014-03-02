@@ -23,7 +23,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/">ISBN2Tpl</a>
+          <a class="navbar-brand" href="/isbn2tpl/">ISBN2Tpl</a>
         </div>
         <div class="collapse navbar-collapse">
           <p class="navbar-text pull-right{{Request::is('/isbn2tpl/contact') ? ' active' : '' }}">
