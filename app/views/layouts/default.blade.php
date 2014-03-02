@@ -26,13 +26,13 @@
           <a class="navbar-brand" href="/">ISBN2Tpl</a>
         </div>
         <div class="collapse navbar-collapse">
-          <p class="navbar-text pull-right{{Request::is('/~fale/contact') ? ' active' : '' }}">
-            {{ link_to_route('contact', 'Contact', array(), array('class' => 'navbar-link')) }}
+          <p class="navbar-text pull-right{{Request::is('/isbn2tpl/contact') ? ' active' : '' }}">
+            {{ link_to('/isbn2tpl/contact', 'Contact', array(), array('class' => 'navbar-link')) }}
           </p>
           <ul class="nav navbar-nav">
-            <li{{ Request::is('/check') ? ' class="active"' : '' }}>{{ link_to_route('check', 'Check')}}<li>
-            <li{{ Request::is('/cite*') ? ' class="active"' : '' }}>{{ link_to_route('cite', 'Cite Template')}}</li>
-            <li{{ Request::is('/api*') ? ' class="active"' : '' }}>{{ link_to_route('api', 'API')}}</li>
+            <li{{ Request::is('/isbn2tpl/check') ? ' class="active"' : '' }}>{{ link_to('/isbn2tpl/check', 'Check')}}<li>
+            <li{{ Request::is('/isbn2tpl/cite*') ? ' class="active"' : '' }}>{{ link_to('/isb2tpl/cite', 'Cite Template')}}</li>
+            <li{{ Request::is('/isbn2tpl/api*') ? ' class="active"' : '' }}>{{ link_to('/isbn2tpl/api', 'API')}}</li>
           </ul>
         </div>
       </div>
