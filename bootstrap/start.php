@@ -27,7 +27,7 @@ $app = new Illuminate\Foundation\Application;
 $env = $app->detectEnvironment(array(
 
 	'local' => array('your-machine-name'),
-	'wmflabs' => array('*.wmflabs'),
+	'wmflabs' => array('http://tools.wmflabs.org/*', '*.wmflabs'),
 
 ));
 
