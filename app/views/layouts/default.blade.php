@@ -5,8 +5,7 @@
     <title>Fale's ToolServer - @yield('title')</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Fabio Alessandro Locati">
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
     <style>
       body {
         padding-top: 60px;
@@ -40,13 +39,9 @@
     <div class="container">
       @yield('content')
     </div> <!-- /container -->
-        <a href="https://github.com/fale/ToolServer">
-            <img style="position: absolute; top:41px; right: 0; border: 0;" 
-                 src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"
-                 alt="Fork me on GitHub" />
-        </a>
     </body>
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     <script type="text/javascript">
 
         var _gaq = _gaq || [];
